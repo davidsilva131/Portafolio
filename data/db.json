@@ -1,0 +1,20 @@
+{
+    "projects":[
+        {
+            "name":"Giphy",
+            "description":"Practica del uso de la API de Giphy, añadiendo una tabla de busquedas recientes.",
+            "link":"https://github.com/davidsilva131/Giphy"
+        },
+        {
+            "name":"casaRoyal",
+            "description":"Pagina creada usando HTML, CSS, JavaScript e implementando el uso de JSON Server y local storage.",
+            "link":"https://github.com/davidsilva131/casaRoyal"
+        },
+        {
+            "name":"FastKart",
+            "description":"Pagina de E-comerce implementando los conocimientos en HTML5, CSS y JavaScript. Añadiendo el uso de JSON Server y local storage.",
+            "link":"https://github.com/davidsilva131/FastKart"
+        }
+        
+    ]
+}
