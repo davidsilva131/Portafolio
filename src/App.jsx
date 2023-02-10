@@ -1,9 +1,12 @@
 import React from "react"
-
+import Welcome from "./components/content/welcome/Welcome"
+import NavBar from "./components/navbar/NavBar"
+import './styles/App.scss'
 function App() {
   return (
     <div className="App">
-      <h1>Hola</h1>
+      <NavBar />
+      <Welcome />
     </div>
   )
 }

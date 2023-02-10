@@ -1,0 +1,19 @@
+@import '../global';
+
+.link{
+  font-family: $roboto;
+  font-weight: 100;
+  color: $secondary-color;
+  cursor: pointer;
+  &:hover{
+    transition: all 0.8s;
+    color: $tertiary-color;
+  }
+}
+
+.active{
+  color: $tertiary-color;
+}
+.inactive{
+  color: $secondary-color;
+}
