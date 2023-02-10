@@ -6,8 +6,8 @@
 }
 /* HTML */
 html{
-    scroll-behavior: smooth;
-    transition: .7s;
+    scroll-behavior:smooth;
+    transition:.7s;
 }
 /* BODY */
 body {
