@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import '../../styles/navbar/Links.scss'
 
-const Links = () => {
+const Links = ({ menuOpen, setMenuOpen }) => {
   const [linkSelected, setLinkSelected] = useState("Inicio")
   const links = [
     {
@@ -28,28 +28,33 @@ const Links = () => {
 
   const handleLink = (link) => {
     setLinkSelected(link)
+    closeMenu()
   }
+
+  const closeMenu = () => {
+    menuOpen && setMenuOpen(!menuOpen)
+  }
+
   return (
     <ul className="nav__links__list">
       {
         links.map((link, index) => (
-          <>
-            <li>
-              <Link
-                key={index}
-                className={`link ${link.text === linkSelected ? 'active' : 'inactive'}`}
-                to={link.href}
-                smooth={true}
-                duration={500}
-                onClick={() => { handleLink(link.text) }}
-              >
-                {link.text}
-              </Link>
-            </li>
-          </>
+
+          <li key={index}>
+            <Link
+              className={`link ${link.text === linkSelected ? 'active' : 'inactive'}`}
+              to={link.href}
+              smooth={true}
+              duration={500}
+              onClick={() => { handleLink(link.text) }}
+            >
+              {link.text}
+            </Link>
+          </li>
+
         ))
       }
-    </ul>
+    </ul >
   )
 };
 

@@ -20,7 +20,7 @@ const NavBar = () => {
         <h1 className="nav__photo__name">David Silva</h1>
       </section>
       <section className={`fadeIn nav__links ${menuOpen ? 'show' : 'hidde'}`}>
-        <Links />
+        <Links menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </section>
       <section className="fadeIn nav__socials">
         <Socials />
