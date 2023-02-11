@@ -4,8 +4,8 @@ const Welcome = () => {
   return (
     <section id="home" className="fadeIn welcome">
       <h3>Hola</h3>
-      <h2>Mi nombre es David Silva</h2>
-      <h3>Desarrollador Front-end</h3>
+      <h2>Soy Juan David Silva</h2>
+      <h3>Desarrollador Front-end con enfasis en React</h3>
     </section>
   )
 };
