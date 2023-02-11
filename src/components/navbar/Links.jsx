@@ -1,9 +1,30 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import '../../styles/navbar/Links.scss'
 
 const Links = () => {
   const [linkSelected, setLinkSelected] = useState("Inicio")
-  const links = ["Inicio", "Sobre mi", "Habilidades", "Proyectos", "Contacto"]
+  const links = [
+    {
+      text: "Inicio",
+      href: 'home'
+    },
+    {
+      text: "Sobre mi",
+      href: 'about'
+    },
+    {
+      text: "Habilidades",
+      href: "skills"
+    },
+    {
+      text: "Proyectos",
+      href: 'projects'
+    },
+    {
+      text: 'Contacto',
+      href: 'contact'
+    }]
 
   const handleLink = (link) => {
     setLinkSelected(link)
@@ -11,13 +32,21 @@ const Links = () => {
   return (
     <ul className="nav__links__list">
       {
-        links.map((link) => (
-          <li key={link}
-            className={`link ${link === linkSelected ? 'active' : 'inactive'}`}
-            onClick={() => { handleLink(link) }}
-          >
-            {link}
-          </li>
+        links.map((link, index) => (
+          <>
+            <li>
+              <Link
+                key={index}
+                className={`link ${link.text === linkSelected ? 'active' : 'inactive'}`}
+                to={link.href}
+                smooth={true}
+                duration={500}
+                onClick={() => { handleLink(link.text) }}
+              >
+                {link.text}
+              </Link>
+            </li>
+          </>
         ))
       }
     </ul>

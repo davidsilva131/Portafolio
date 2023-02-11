@@ -5,18 +5,20 @@
   background-color: $primary-color;
   display: flex;
   flex-direction: column;
-  padding: 50px 20px 50px 20px;
-  gap: 50px;
+  padding: 50px 20px 20px 20px;
+  gap: 15px;
   align-items: center;
   position: fixed;
+  border-right: 1px solid $tertiary-color;
+
   &__photo{
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     &__image{
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 100%;
     }
     &__name{
@@ -27,7 +29,7 @@
   }
 
   &__links{
-    margin-top: 50px;
+    margin-top: 25px;
     padding: 50px;
     transition: all 0.8s;
     &__list{
@@ -40,7 +42,7 @@
   }
 
   &__socials{
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     gap: 20px;
     &__logo{
@@ -68,30 +70,25 @@
 .hidde{
   display: none;
 }
-.fadeIn{
-  animation-name: fadeIn;
-  animation-duration: 2s;
-}
 
-@keyframes fadeIn{
-  0% {opacity: 0;}
-  100%{opacity: 1;}
-}
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .nav{
     &__links{
-      display: block;
+      display:block;
     }
   }
 }
 
 @media (max-width:1024px) {
   .nav{
+    border-right: 0;
+    border-bottom: 1px solid $tertiary-color;
     height: 80px;
     width: 100vw;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 20px 0 20px;
+    
     &__photo{
       gap: 0;
       &__image{
@@ -100,11 +97,12 @@
     }
     &__links{
       position: absolute;
-      right: 0;
       top: 0;
+      left: 0;
       width: 100%;
+      height: calc(100vh - 80px);
       background-color: $primary-color;
-      padding: 50px 0 50px 0;
+      padding: 70px 0 50px 0;
     }
     &__socials{
       margin-top: 0;

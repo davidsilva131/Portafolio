@@ -1,5 +1,54 @@
+@import '../global';
+
 .welcome{
-  width: 100%;
-  height: 2000px;
-  background-color: aqua;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: white;
+  border-bottom: 1px solid $tertiary-color;
+  scroll-behavior: smooth;
+  h2{
+    width: fit-content;
+    text-align: center;
+    font-family: $roboto;
+    overflow: hidden;
+    font-size: 45px;
+    border-right: .15em solid $tertiary-color; 
+    white-space: nowrap; 
+    margin: 0 auto;
+    animation: 
+      typing 3.5s steps(35, end),
+      blink-caret .5s step-end infinite;
+  }
+  h3{
+    text-align: center;
+    font-family: $roboto;
+    font-size: 30px;
+  }
+}
+@media (max-width:1024px) {
+  .welcome{
+    height: calc(100vh - 80px);
+  }
+}
+
+@media (max-width:768px) {
+  .welcome{
+    h2{
+      font-size: 30px;
+    }
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $tertiary-color }
 }
