@@ -1,0 +1,49 @@
+@import '../global';
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+  background-color: $primary-color;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 20px 50px 20px;
+  &__tittle{
+    h2{
+      color: $tertiary-color;
+        font-family: $roboto;
+        font-size: 40px;
+        font-weight: 300;
+    }
+  }
+  &__body{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    &__image{
+      width: 100px;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(0%) hue-rotate(255deg) brightness(94%) contrast(89%);
+        &:hover{
+          filter:brightness(0) saturate(100%) invert(39%) sepia(3%) saturate(0%) hue-rotate(255deg) brightness(94%) contrast(89%);
+        }
+    }
+    &__text{
+      h3{
+        font-family: $roboto;
+        color: $tertiary-color;
+      }
+    }
+  }
+}

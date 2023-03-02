@@ -4,6 +4,7 @@ import '../../styles/content/Content.scss'
 import About from "./about/About";
 import Skills from "./skills/Skills";
 import Projects from "./projects/Projects";
+import Contact from "./contact/Contact";
 const Content = () => {
   return (
     <main className="content">
@@ -11,6 +12,7 @@ const Content = () => {
       <About />
       <Skills />
       <Projects />
+      <Contact />
     </main>
   )
 };
