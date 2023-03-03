@@ -1,0 +1,58 @@
+@import '../global';
+
+.welcome{
+  height: 100vh;
+  display: flex;
+  padding: 50px 20px 50px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: white;
+  scroll-behavior: smooth;
+  h2{
+    color: $tertiary-color;
+    width: fit-content;
+    text-align: center;
+    font-family: $roboto;
+    overflow: hidden;
+    font-size: 55px;
+    border-right: .15em solid $tertiary-color; 
+    white-space: nowrap; 
+    margin: 0 auto;
+    animation: 
+      typing 3.5s steps(35, end),
+      blink-caret .5s step-end infinite;
+  }
+  h3{
+    text-align: center;
+    font-family: $roboto;
+    font-size: 30px;
+  }
+}
+@media (max-width:1024px) {
+  .welcome{
+    height: calc(100vh - 80px);
+  }
+}
+
+@media (max-width:768px) {
+  .welcome{
+    h2{
+      font-size: 30px;
+    }
+    h3{
+      font-size: 20px;
+    }
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 40% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $tertiary-color }
+}

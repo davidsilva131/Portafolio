@@ -1,0 +1,11 @@
+.App{
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+@media (max-width:1024px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+  }
+}

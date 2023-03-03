@@ -1,0 +1,19 @@
+@import '../global';
+.content{
+  position: absolute;
+  z-index: -1;
+  width: calc(100% - 300px);
+  right: 0;
+  background-color: $primary-color;
+  scroll-behavior: smooth;
+  
+}
+@media (max-width:1024px) {
+  .content{
+    position:absolute;
+    width: 100%;
+    margin-top: 80px;
+    right: auto;
+    top: 0;
+  }
+}
