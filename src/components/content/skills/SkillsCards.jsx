@@ -52,6 +52,18 @@ const SkillsCards = () => {
     {
       title: 'Tailwind',
       image: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg'
+    },
+    {
+      title: 'NextJS',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/1920px-Nextjs-logo.svg.png?20190307203525'
+    },
+    {
+      title: 'Blender',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/1280px-Blender_logo_no_text.svg.png'
+    },
+    {
+      title: 'ThreeJS',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Three.js_Icon.svg/1024px-Three.js_Icon.svg.png?20211115112438'
     }
   ]
 
