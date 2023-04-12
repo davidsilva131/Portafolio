@@ -38,9 +38,9 @@
   }
   &__button{
       padding: 7px;
-      background: transparent;
-      border: 1px solid $tertiary-color;
-      border-radius: 20px;
+      background: $tertiary-color;
+      border: 1px solid transparent;
+      border-radius: 10px;
       cursor: pointer;
       a{
         text-decoration: none;
@@ -49,8 +49,11 @@
         color: $secondary-color;
         transition: 0.5s;
       &:hover{
-        color: $tertiary-color;
+        color: $primary-color;
       }
+      }
+      &:hover{
+        border: 1px solid $secondary-color;
       }
   }
 }

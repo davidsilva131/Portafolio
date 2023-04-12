@@ -1,8 +1,8 @@
 import React from "react";
 import '../../../styles/projects/ProjectsCards.scss'
 import DeliveryLogo from '../../../assets/logo_delivery.svg'
-import AgroHouseLogo from '../../../assets/agrohouse_verdeSinFondo.png'
 import LolChampLogo from '../../../assets/lolchamp-logo.png'
+import cocktailsLogo from '../../../assets/cocktailsLogo.webp'
 const ProjectsCards = () => {
   const projects = [{
     name: "DeliveryApp",
@@ -11,10 +11,10 @@ const ProjectsCards = () => {
     image: DeliveryLogo
   },
   {
-    name: "AgroHouse",
-    urlRepository: "https://github.com/davidsilva131/demo-day-projects-agrohouse",
-    urlDeploy: "https://agrohouse-2bc5a.web.app/",
-    image: AgroHouseLogo
+    name: "Cocktails",
+    urlRepository: "https://github.com/davidsilva131/Cocktails-Next",
+    urlDeploy: "https://cocktails-next-henna.vercel.app/",
+    image: cocktailsLogo
   },
   {
     name: "LOLChampions",
@@ -39,11 +39,16 @@ const ProjectsCards = () => {
                 <a href={project.urlRepository} target="_blank" rel="noreferrer" >
                   Repositorio</a>
               </button>
-              <button
-                className="project__card__button">
-                <a href={project.urlDeploy} target="_blank" rel="noreferrer">
-                  Despliegue</a>
-              </button>
+              {
+                project.urlDeploy !== ''
+                && (
+                  <button
+                    className="project__card__button">
+                    <a href={project.urlDeploy} target="_blank" rel="noreferrer">
+                      Despliegue</a>
+                  </button>
+                )
+              }
             </div>
           </div>
         ))
