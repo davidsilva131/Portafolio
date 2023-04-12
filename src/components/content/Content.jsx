@@ -9,9 +9,9 @@ const Content = () => {
   return (
     <main className="content">
       <Welcome />
-      <About />
-      <Skills />
       <Projects />
+      <Skills />
+      <About />
       <Contact />
     </main>
   )
