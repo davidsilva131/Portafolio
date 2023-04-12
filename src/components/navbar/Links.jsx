@@ -10,16 +10,16 @@ const Links = ({ menuOpen, setMenuOpen }) => {
       href: 'home'
     },
     {
-      text: "Sobre mi",
-      href: 'about'
+      text: "Proyectos",
+      href: 'projects'
     },
     {
       text: "Habilidades",
       href: "skills"
     },
     {
-      text: "Proyectos",
-      href: 'projects'
+      text: "Sobre mi",
+      href: 'about'
     },
     {
       text: 'Contacto',
