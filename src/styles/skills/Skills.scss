@@ -1,9 +1,8 @@
 @import '../global';
 
-.skills{
+.skills {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   max-width: 800px;
   width: 100%;
   margin: auto;
@@ -13,15 +12,15 @@
   align-items: center;
   gap: 50px;
   padding: 50px 20px 50px 20px;
-  &__title{
-    h2{
+  &__title {
+    h2 {
       color: $tertiary-color;
       font-family: $roboto;
       font-size: 40px;
       font-weight: 300;
     }
   }
-  &__technologies{
+  &__technologies {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
