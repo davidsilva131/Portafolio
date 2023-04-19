@@ -1,6 +1,6 @@
 @import '../global';
 
-.ProjectsCards{
+.ProjectsCards {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -9,51 +9,49 @@
   align-items: center;
 }
 
-.project__card{
+.project__card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 300px;
   min-height: 200px;
-  border: 1px solid $tertiary-color;
+  border: 1px solid white;
   border-radius: 20px;
-  &__image{
+  &__image {
     margin-top: 10px;
-    img{
+    img {
       width: 70px;
       height: 70px;
       object-fit: contain;
     }
   }
-  &__tittle{
+  &__tittle {
     margin-top: 10px;
     color: $tertiary-color;
     font-family: $roboto;
     font-size: large;
   }
-  &__buttons{
+  &__buttons {
     display: flex;
     gap: 10px;
     margin-top: 20px;
   }
-  &__button{
-      padding: 7px;
+  &__button {
+    padding: 7px;
+    background: $secondary-color;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
       background: $tertiary-color;
-      border: 1px solid transparent;
-      border-radius: 10px;
-      cursor: pointer;
-      a{
-        text-decoration: none;
-        font-family: $roboto;
-        font-size: large;
-        color: $secondary-color;
-        transition: 0.5s;
-      &:hover{
-        color: $primary-color;
-      }
-      }
-      &:hover{
-        border: 1px solid $secondary-color;
-      }
+    }
+    a {
+      text-decoration: none;
+      font-family: $roboto;
+      font-size: large;
+      color: $primary-color;
+      transition: 0.5s;
+    }
   }
 }

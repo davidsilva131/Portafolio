@@ -2,16 +2,20 @@
 
 $primary-color: #111418;
 $secondary-color: #ffff;
-$tertiary-color: #1BAA80;
+$tertiary-color: #1baa80;
 
 $roboto: 'Roboto', sans-serif;
 
-.fadeIn{
+.fadeIn {
   animation-name: fadeIn;
   animation-duration: 2s;
 }
 
-@keyframes fadeIn{
-  0% {opacity: 0;}
-  100%{opacity: 1;}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
