@@ -13,7 +13,7 @@ const ProjectsCards = () => {
   {
     name: "Cocktails",
     urlRepository: "https://github.com/davidsilva131/Cocktails-Next",
-    urlDeploy: "https://cocktails-next-henna.vercel.app/",
+    urlDeploy: "https://cocktails-next-azure.vercel.app/bebidas",
     image: cocktailsLogo
   },
   {
