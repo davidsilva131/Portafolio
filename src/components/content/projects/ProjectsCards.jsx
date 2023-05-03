@@ -3,6 +3,7 @@ import '../../../styles/projects/ProjectsCards.scss'
 import DeliveryLogo from '../../../assets/logo_delivery.svg'
 import LolChampLogo from '../../../assets/lolchamp-logo.png'
 import cocktailsLogo from '../../../assets/cocktailsLogo.webp'
+import quizLogo from '../../../assets/quiz.svg'
 const ProjectsCards = () => {
   const projects = [{
     name: "DeliveryApp",
@@ -21,7 +22,13 @@ const ProjectsCards = () => {
     urlRepository: "https://github.com/nuthelk/LolChampions",
     urlDeploy: "",
     image: LolChampLogo
-  }]
+  },
+{
+  name:"Quiz App",
+  urlRepository:"https://github.com/davidsilva131/Quiz-App-With-Zustand",
+  urlDeploy:"https://quiz-app-with-zustand.vercel.app/",
+  image:quizLogo
+}]
   return (
     <div className="ProjectsCards">
       {
