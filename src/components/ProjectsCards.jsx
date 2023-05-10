@@ -6,6 +6,7 @@ import deliveryPrev from '../assets/delivery-screenshot.png'
 import cocktailsPrev from '../assets/cocktails-prev.png'
 import quizPrev from '../assets/quiz-prev.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const PROJECTS = [
   {
@@ -45,10 +46,10 @@ const ProjectsCards = () => {
         PROJECTS.map(project => (
           <article className='w-[340px] h-[450px] border border-gray-700 rounded-lg hover:opacity-90' key={project.title}>
             <div className='w-full h-full flex flex-col items-center justify-between'>
-              <a
+              <Link
                 href={project.deploy}
                 target='_blank'
-                rel="noopener"
+                rel='noopener'
               >
                 <Image src={project.preview} className='rounded-t-lg h-[180px]' width={340} height={180} alt={`${project.title} preview`} />
                 <div className='flex w-full px-4 gap-1 mt-3'>
@@ -67,18 +68,18 @@ const ProjectsCards = () => {
                     }
                   </div>
                 </div>
-              </a>
+              </Link>
               <div className='w-full flex mb-4 px-4 gap-8'>
-                <button type="button" className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 shadow-lg shadow-green-500/50  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-                  <a href={project.deploy} target='_blank' rel='noopener'>
+                <Link href={project.deploy} target='_blank' rel='noopener'>
+                  <button aria-label={`${project.title} deploy`} type="button" className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 shadow-lg shadow-green-500/50  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
                     Deploy
-                  </a>
-                </button>
-                <button type="button" className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 shadow-lg shadow-purple-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-                  <a href={project.repository} target='_blank' rel='noopener'>
+                  </button>
+                </Link>
+                <Link href={project.repository} target='_blank' rel='noopener'>
+                  <button aria-label={`${project.repository} repository`} type="button" className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 shadow-lg shadow-purple-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
                     Repository
-                  </a>
-                </button>
+                  </button>
+                </Link>
               </div>
             </div>
           </article>
