@@ -28,7 +28,6 @@ const Links = ({ open, setOpen }) => {
         {pages.map((page, index) => (
           <li key={page.text}>
             <Link
-              tabIndex={index + 1}
               to={page.href}
               smooth={true}
               offset={-120}

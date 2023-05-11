@@ -2,7 +2,8 @@
 const HamburgerButton = ({ open, setOpen }) => {
   return (
     <button
-      tabIndex={1}
+      aria-label='Hamburger menu'
+      tabIndex={0}
       className='w-14 h-14 relative focus:outline-none bg-transparent rounded lg:hidden'
       onClick={() => {
         setOpen(!open)

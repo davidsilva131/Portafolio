@@ -29,7 +29,7 @@ const Contact = () => {
           CONTACT_LINKS.map(social => (
             <Link className='flex flex-col items-center gap-4 hover:opacity-80' key={social.name} href={social.link} target='_blank' aria-label={`Link to David Silva ${social.name}`}>
               <Image src={social.icon} width={75} height={75} alt='github logo' />
-              <h4>{social.name}</h4>
+              <span>{social.name}</span>
             </Link>
           ))
         }
