@@ -1,5 +1,5 @@
 {
-  "extends": [
+  "extends":[
     "/node_modules/standard/eslintrc.json"
-  ]
+  ] 
 }
