@@ -2,9 +2,11 @@
 import cocktailsLogo from '../assets/cocktailsLogo.webp'
 import deliveryLogo from '../assets/logo_delivery.svg'
 import quizLogo from '../assets/quiz-app.svg'
+import tesolLogo from '../assets/tesollogo.ico'
 import deliveryPrev from '../assets/delivery-screenshot.png'
 import cocktailsPrev from '../assets/cocktails-prev.png'
 import quizPrev from '../assets/quiz-prev.png'
+import tesolPrev from '../assets/tesolPrev.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -35,6 +37,15 @@ export const PROJECTS = [
     repository: 'https://github.com/davidsilva131/Quiz-App-With-Zustand',
     image: quizLogo,
     preview: quizPrev
+  },
+  {
+    title: 'Tesol',
+    description: 'Landing page to Tesol, social project of Tirol 3, neighborhood of San Cristobal, Medellín.',
+    stack: ['Next.js', 'Threejs', 'Three Fiber', 'Three Drei', 'Tailwind', 'Valtio'],
+    deploy: 'https://landing-tesol.vercel.app/',
+    repository: 'https://github.com/davidsilva131/landing-tesol',
+    image: tesolLogo,
+    preview: tesolPrev
   }
 ]
 
@@ -51,9 +62,9 @@ const ProjectsCards = () => {
                 target='_blank'
                 rel='noopener'
               >
-                <Image src={project.preview} className='rounded-t-lg h-[180px]' width={340} height={180} alt={`${project.title} preview`} />
+                <Image src={project.preview} className='rounded-t-lg h-[180px] aspect-auto' width={340} height={180} alt={`${project.title} preview`} />
                 <div className='flex w-full px-4 gap-1 mt-3'>
-                  <Image src={project.image} className='w-[25px] h-[25px]' width={25} height={25} alt={`${project.title} logo`} />
+                  <Image src={project.image} className='w-[25px] h-[25px] aspect-auto' width={25} height={25} alt={`${project.title} logo`} />
                   <h3 className='text-[#22C55E] text-lg font-bold opacity-80 text-'>{project.title}</h3>
                 </div>
                 <div className='w-full flex flex-col gap-2 mt-2 px-4'>
